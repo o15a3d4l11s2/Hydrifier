@@ -1,27 +1,28 @@
 //
-//  ViewController.m
+//  RegisterViewController.m
 //  Hydrifier
 //
-//  Created by Dimitar Topalov on 10/18/14.
+//  Created by Dimitar Topalov on 10/19/14.
 //  Copyright (c) 2014 DIvan. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "RegisterViewController.h"
 
-@interface ViewController ()
+@interface RegisterViewController ()
 
 @end
 
-@implementation ViewController
+@implementation RegisterViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end

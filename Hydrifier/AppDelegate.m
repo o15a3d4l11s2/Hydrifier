@@ -16,8 +16,27 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [Parse setApplicationId:@"UWEHhn0Qhjcp0x12x8k5RmDozZlXMCUP8erxTyN4" clientKey:@"j6stx3G87JUJe6bG9QL96kCHPDsrF9O1YYNwiySn"];
+    
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    [self showInitialView];
+    
     return YES;
+}
+
+- (void)showInitialView
+{
+    UIViewController *rootViewController;
+    
+    if ([PFUser currentUser]) {
+        rootViewController = (UINavigationController *)[[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateInitialViewController];
+    } else {
+        rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"LoginNavigationViewController"];
+    }
+    
+    self.window.rootViewController = rootViewController;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
